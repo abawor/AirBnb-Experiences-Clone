@@ -9,9 +9,14 @@ export default function Card(props) {
     }
     return (
         <div className="card">
-            {badgeText && <div className="card--badge">{badgeText}</div>
+            {
+                badgeText &&
+                <div className="card--badge">{badgeText}</div>
             }
-            <img src={`src/images/${props.card.coverImg}`} className="card--image" />
+            <img
+                src={`src/images/${props.card.coverImg}`}
+                className="card--image"
+            />
             <div className="card--stats">
                 <img src="src/images/star.png" className="card--star" />
                 <span>{props.card.stats.rating}</span>
@@ -19,7 +24,9 @@ export default function Card(props) {
                 <span className="gray">{props.card.location}</span>
             </div>
             <p className="card--title">{props.card.title}</p>
-            <p className="card--price"><span className="bold">From ${props.card.price}</span> / person</p>
+            <p className="card--price">
+                <span className="bold">From ${props.card.price}</span> / person
+            </p>
         </div>
     )
 }
